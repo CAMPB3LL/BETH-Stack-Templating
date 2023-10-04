@@ -1,7 +1,7 @@
 ## BETH-Stack-Templating
 Templating for future projects
 
-## [Beth (Bun, Elysia, Turso, HTMX)](https://www.youtube.com/watch?v=cpzowDDJj24) uses the following:
+## [BETH (Bun, Elysia, Turso, HTMX)](https://www.youtube.com/watch?v=cpzowDDJj24) uses the following:
   * [BUN - Javascript Runtime/server](https://bun.sh/docs/quickstart)
   * [Elysia - BUN web framework](https://elysiajs.com/quick-start.html)
   * [Turso - Database](https://docs.turso.tech/tutorials/)
