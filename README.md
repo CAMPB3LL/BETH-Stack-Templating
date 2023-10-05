@@ -1,5 +1,5 @@
 ## BETH-Stack-Templating
-Templating for future projects
+The aim of this project is to make a template for future "hypermedia-driven" projects. Using the BETH stack shown in the video linked in this project 
 
 ## [BETH (Bun, Elysia, Turso, HTMX)](https://www.youtube.com/watch?v=cpzowDDJj24) uses the following:
   * [BUN - Javascript Runtime/server](https://bun.sh/docs/quickstart)
