@@ -3,14 +3,14 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "bun-types": "latest",
+    "bun-types": "^1.0.8",
     "typed-html": "^3.0.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@elysiajs/html": "^0.7.0",
-    "elysia": "^0.7.15"
+    "@elysiajs/html": "^0.7.3",
+    "elysia": "^0.7.21"
   }
 }
