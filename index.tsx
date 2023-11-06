@@ -8,23 +8,15 @@ const app = new Elysia()
 		html(
 			<BaseHtml>
 				<body class="flex w-full h-screen justify-center items-center">
-					<div class="w-full justify-items-center grid grid-cols-2 gap-y-40 mx-20">
+					<div class="slide-it w-full justify-items-center grid grid-cols-2 gap-y-40 mx-20">
 						<p class="font-sans text-6xl text-slate-300 font-bold col-start-1 col-span-2">Who are you?</p>
-						<button hx-post="/clicked" hx-swap="outerHTML" class="bg-purple-600 h-max w-4/5 rounded-full font-sans text-4xl text-slate-300 font-bold col-start-1 col-span-1">
+						<button hx-get="/new-content" hx-swap="innerHTML transition:true" hx-target="closest div" class="bg-purple-600 h-max w-4/5 rounded-full font-sans text-4xl text-slate-300 font-bold col-start-1 col-span-1">
 							<p class="my-10"><i class="fa-solid fa-user"></i>USER</p>
 						</button>
-						<button hx-post="/clicked" hx-swap="outerHTML" class="bg-purple-700 h-max w-4/5 rounded-full font-sans text-4xl text-slate-300 font-bold col-start-2 col-span-2">
+						<button hx-get="/new-content" hx-swap="innerHTML transition:true" hx-target="closest div" class="bg-purple-700 h-max w-4/5 rounded-full font-sans text-4xl text-slate-300 font-bold col-start-2 col-span-2">
 							<p class="my-10"><i class="fa-solid fa-wrench"></i>TECH</p>
 						</button>
-					</div>
-
-					<div class="slide-it">
-					   <h1>Testing Slider</h1>
-					   <button hx-get="/new-content" hx-swap="innerHTML transition:true" hx-target="closest div">
-					     Swap It!
-					   </button>
-					</div>
-					
+					</div>		
 				</body>
 			</BaseHtml>
 		)
