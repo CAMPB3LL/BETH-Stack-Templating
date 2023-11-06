@@ -17,6 +17,14 @@ const app = new Elysia()
 							<p class="my-10"><i class="fa-solid fa-wrench"></i>TECH</p>
 						</button>
 					</div>
+
+					<div class="slide-it">
+					   <h1>Testing Slider</h1>
+					   <button hx-get="/new-content" hx-swap="innerHTML transition:true" hx-target="closest div">
+					     Swap It!
+					   </button>
+					</div>
+					
 				</body>
 			</BaseHtml>
 		)
@@ -37,5 +45,37 @@ const BaseHtml = ({children}: elements.Children) =>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://kit.fontawesome.com/0902ff1ba2.js" crossorigin="anonymous"></script>
 </head>
+
+<style>
+   @keyframes fade-in {
+     from { opacity: 0; }
+   }
+
+   @keyframes fade-out {
+     to { opacity: 0; }
+   }
+
+   @keyframes slide-from-right {
+     from { transform: translateX(90px); }
+   }
+
+   @keyframes slide-to-left {
+     to { transform: translateX(-90px); }
+   }
+
+   .slide-it {
+     view-transition-name: slide-it;
+   }
+
+   ::view-transition-old(slide-it) {
+     animation: 180ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+     600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+   }
+   ::view-transition-new(slide-it) {
+     animation: 420ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+     600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+   }
+</style>
+
 ${children}`
 ;
