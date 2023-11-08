@@ -7,13 +7,13 @@ const app = new Elysia()
 	.get('/', ({ html }) =>
 		html(
 			<BaseHtml>
-				<body class="flex w-full h-screen justify-center items-center text-slate-300 font-sans text-4xl font-bold">
-					<div id="register" hx-swap="outerHTML swap:0.25s" class="fade-me-out w-full justify-items-center grid grid-cols-2 gap-y-40 mx-20">
-						<p class="font-sans text-6xl text-slate-300 font-bold col-start-1 col-span-2">Who are you?</p>
-						<button hx-get="/user" hx-trigger="click" hx-target="#register" class="bg-purple-600 h-max w-4/5 rounded-full col-start-1 col-span-1">
+				<body class="flex w-full h-screen justify-center items-center text-slate-300 font-sans text-4xl font-bold antialiased">
+					<div id="register" hx-swap="outerHTML swap:0.25s" class="fade-me-out w-full h-1/5 justify-items-center grid grid-cols-2 gap-y-40 m-20">
+						<p class="font-sans text-7xl text-slate-300 font-bold col-start-1 col-span-2">Who are you?</p>
+						<button hx-get="/user" hx-trigger="click" hx-target="#register" class="bg-purple-600 h-auto w-4/5 rounded-full col-start-1 col-span-1">
 							<p class="my-10"><i class="fa-solid fa-user"></i>USER</p>
 						</button>
-						<button hx-get="/tech" hx-trigger="click" hx-target="#register" class="bg-purple-700 h-max w-4/5 rounded-full col-start-2 col-span-2">
+						<button hx-get="/tech" hx-trigger="click" hx-target="#register" class="bg-purple-700 h-auto w-4/5 rounded-full col-start-2 col-span-2">
 							<p class="my-10"><i class="fa-solid fa-wrench"></i>TECH</p>
 						</button>
 					</div>
@@ -22,38 +22,36 @@ const app = new Elysia()
 		)
 	)
 	.get("/tech", () =>
-	<div id="tech-register" hx-swap="outerHTML settle:0.5s" class="fade-me-in w-full h-screen justify-items-center grid mx-20 py-40">
-		<p class="font-sans text-6xl text-slate-300 font-bold">Register</p>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
+	<div id="tech-register" hx-swap="outerHTML settle:0.5s" class="fade-me-in w-full h-screen justify-items-center grid grid-cols-2 m-20 py-40">
+		<p class="font-sans text-slate-300 font-bold col-start-1 col-span-2 my-auto text-7xl">Register</p>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="fname" name="fname" placeholder="First Name"></input>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="lname" name="lname" placeholder="Last Name"></input>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="email" name="email" placeholder="Email"></input>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="password" name="password" placeholder="Password"></input>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="cpassword" name="cpassword" placeholder="Confirm Password"></input>
 
-		<button hx-get="/previous" hx-trigger="click" class="bg-purple-600 h-max w-4/5 rounded-full col-start-1 col-span-1">
-			<p class="my-10">Previous</p>
+		<button hx-get="/" hx-trigger="click" class="bg-purple-600 h-3/5 w-4/5 rounded-full col-start-1 col-span-1">
+			<p class="my-10">Back</p>
 		</button>
-		<button hx-get="/submit" hx-trigger="click" class="bg-purple-700 h-max w-4/5 rounded-full col-start-2 col-span-2">
+		<button hx-get="/submit" hx-trigger="click" class="bg-purple-700 h-3/5 w-4/5 rounded-full col-start-2 col-span-2">
 			<p class="my-10">Submit</p>
 		</button>
 
 	</div>)
 
 	.get("/user", () =>
-	<div id="user-register" hx-swap="outerHTML settle:0.5s" class="fade-me-in w-full h-screen justify-items-center grid mx-20 py-40">
-		<p class="font-sans text-6xl text-slate-300 font-bold">Register</p>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-1/2 w-full" type="text" id="email" name="email" placeholder="Email"></input>
+	<div id="user-register" hx-swap="outerHTML settle:0.5s" class="fade-me-in w-full h-screen justify-items-center grid grid-cols-2 m-20 py-40">
+		<p class="font-sans text-slate-300 font-bold col-start-1 col-span-2 my-auto text-7xl">Register</p>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="fname" name="fname" placeholder="First Name"></input>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="lname" name="lname" placeholder="Last Name"></input>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="email" name="email" placeholder="Email"></input>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="password" name="password" placeholder="Password"></input>
+		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="cpassword" name="cpassword" placeholder="Confirm Password"></input>
 
-		<button hx-get="/previous" hx-trigger="click" class="bg-purple-600 h-max w-4/5 rounded-full col-start-1 col-span-1">
-			<p class="my-10">Previous</p>
+		<button hx-get="/" hx-trigger="click" class="bg-purple-600 h-3/5 w-4/5 rounded-full col-start-1 col-span-1">
+			<p class="my-10">Back</p>
 		</button>
-		<button hx-get="/submit" hx-trigger="click" class="bg-purple-700 h-max w-4/5 rounded-full col-start-2 col-span-2">
+		<button hx-get="/submit" hx-trigger="click" class="bg-purple-700 h-3/5 w-4/5 rounded-full col-start-2 col-span-2">
 			<p class="my-10">Submit</p>
 		</button>
 
