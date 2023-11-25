@@ -7,7 +7,7 @@ const app = new Elysia()
 	.get('/', ({ html }) =>
 		html(
 			<BaseHtml>
-				<body class="flex flex-col space-y-16 p-24 w-full h-screen text-slate-300 font-bold antialiased">
+				<body class="flex flex-col space-y-24 p-24 w-full h-screen text-slate-300 antialiased">
 
 					{/* <p class="font-sans text-7xl text-slate-300 font-bold col-start-1 col-span-2">Who are you?</p>
 					<button hx-get="/user" hx-trigger="click" hx-target="#register" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-auto w-4/5 rounded-full col-start-1 col-span-1">
@@ -22,8 +22,8 @@ const app = new Elysia()
 
 					<button class="g-signin2 bg-gradient-to-r from-cyan-500 to-blue-500  h-auto w-4/5 rounded-full col-start-2 col-span-2" data-onsuccess="onSignIn"></button> */}
 
-					<h1 class="text-8xl italic font-extrabold">TechSwift</h1>
-					<h2 class="text-6xl italic">Providing On-Demand IT Services to You!</h2>
+					<h1 class="text-7xl italic text-black mt-20"><span class="p-8 pl-14 pr-28 bg-slate-300 rounded-full">TechSwift</span></h1>
+					<h2 class="text-5xl italic">Delivering on-demand IT Services to your doorstep</h2>
 					<button class="g-signin2 rounded-full" data-onsuccess="onSignIn"></button>
 
 				</body>
@@ -85,8 +85,8 @@ const BaseHtml = ({children}: elements.Children) =>
 <meta name="google-signin-client_id" content="668696165605-lfsea9h6h6hl3hoofbdhp7k6cmli87rl.apps.googleusercontent.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-<style>body {font-family: 'Roboto', sans-serif;}</style>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+<style>body {font-family: 'Open Sans', sans-serif;}</style>
 </head>
 
 ${children}`
