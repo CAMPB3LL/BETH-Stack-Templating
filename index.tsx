@@ -24,48 +24,51 @@ const app = new Elysia()
 
 					<h1 class="text-7xl italic text-black mt-20"><span class="p-8 pl-14 pr-28 bg-slate-300 rounded-full">TechSwift</span></h1>
 					<h2 class="text-5xl italic">Delivering on-demand IT Services to your doorstep</h2>
-					<button class="g-signin2 rounded-full" data-onsuccess="onSignIn"></button>
+					<button class="g-signin2 fixed bottom-0 pb-24" data-width="750" data-height="200" data-longtitle="true" data-onsuccess="onSignIn"></button>
 
 				</body>
 			</BaseHtml>
 		)
 	)
-	.get("/tech", () =>
-	<div id="tech-register" hx-swap="outerHTML settle:0.5s" class="fade-me-in w-full h-screen justify-items-center grid grid-cols-2 m-20 py-40">
 
-		<p class="font-sans text-slate-300 font-bold col-start-1 col-span-2 my-auto text-7xl">Register</p>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="fname" name="fname" placeholder="First Name"></input>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="lname" name="lname" placeholder="Last Name"></input>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="password" name="password" placeholder="Password"></input>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="cpassword" name="cpassword" placeholder="Confirm Password"></input>
 
-		<button hx-get="/" hx-trigger="click" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-3/5 w-4/5 rounded-full col-start-1 col-span-1">
-			<p class="my-10">Back</p>
-		</button>
-		<button hx-get="/submit" hx-trigger="click" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-3/5 w-4/5 rounded-full col-start-2 col-span-2">
-			<p class="my-10">Submit</p>
-		</button>
 
-	</div>)
+	// .get("/tech", () =>
+	// <div id="tech-register" hx-swap="outerHTML settle:0.5s" class="fade-me-in w-full h-screen justify-items-center grid grid-cols-2 m-20 py-40">
 
-	.get("/user", () =>
-	<div id="user-register" hx-swap="outerHTML settle:0.5s" class="fade-me-in w-full h-screen justify-items-center grid grid-cols-2 m-20 py-40">
-		<p class="font-sans text-slate-300 font-bold col-start-1 col-span-2 my-auto text-7xl">Register</p>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="fname" name="fname" placeholder="First Name"></input>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="lname" name="lname" placeholder="Last Name"></input>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="email" name="email" placeholder="Email"></input>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="password" name="password" placeholder="Password"></input>
-		<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="cpassword" name="cpassword" placeholder="Confirm Password"></input>
+	// 	<p class="font-sans text-slate-300 font-bold col-start-1 col-span-2 my-auto text-7xl">Register</p>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="fname" name="fname" placeholder="First Name"></input>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="lname" name="lname" placeholder="Last Name"></input>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="email" name="email" placeholder="Email"></input>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="password" name="password" placeholder="Password"></input>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="cpassword" name="cpassword" placeholder="Confirm Password"></input>
 
-		<button hx-get="/" hx-trigger="click" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-3/5 w-4/5 rounded-full col-start-1 col-span-1">
-			<p class="my-10">Back</p>
-		</button>
-		<button hx-get="/submit" hx-trigger="click" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-3/5 w-4/5 rounded-full col-start-2 col-span-2">
-			<p class="my-10">Submit</p>
-		</button>
+	// 	<button hx-get="/" hx-trigger="click" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-3/5 w-4/5 rounded-full col-start-1 col-span-1">
+	// 		<p class="my-10">Back</p>
+	// 	</button>
+	// 	<button hx-get="/submit" hx-trigger="click" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-3/5 w-4/5 rounded-full col-start-2 col-span-2">
+	// 		<p class="my-10">Submit</p>
+	// 	</button>
 
-	</div>)
+	// </div>)
+
+	// .get("/user", () =>
+	// <div id="user-register" hx-swap="outerHTML settle:0.5s" class="fade-me-in w-full h-screen justify-items-center grid grid-cols-2 m-20 py-40">
+	// 	<p class="font-sans text-slate-300 font-bold col-start-1 col-span-2 my-auto text-7xl">Register</p>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="fname" name="fname" placeholder="First Name"></input>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="lname" name="lname" placeholder="Last Name"></input>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="email" name="email" placeholder="Email"></input>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="password" name="password" placeholder="Password"></input>
+	// 	<input class="text-center rounded-full h-3/4 w-full col-start-1 col-span-2" type="text" id="cpassword" name="cpassword" placeholder="Confirm Password"></input>
+
+	// 	<button hx-get="/" hx-trigger="click" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-3/5 w-4/5 rounded-full col-start-1 col-span-1">
+	// 		<p class="my-10">Back</p>
+	// 	</button>
+	// 	<button hx-get="/submit" hx-trigger="click" class="bg-gradient-to-r from-cyan-500 to-blue-500  h-3/5 w-4/5 rounded-full col-start-2 col-span-2">
+	// 		<p class="my-10">Submit</p>
+	// 	</button>
+
+	// </div>)
 
 	.listen(3000)
 
@@ -91,3 +94,11 @@ const BaseHtml = ({children}: elements.Children) =>
 
 ${children}`
 ;
+
+function onSignIn(googleUser) {
+	var profile = googleUser.getBasicProfile();
+	console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+	console.log('Name: ' + profile.getName());
+	console.log('Image URL: ' + profile.getImageUrl());
+	console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  }
